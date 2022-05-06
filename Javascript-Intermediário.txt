@@ -1,0 +1,431 @@
+WINDOW
+
+
+o objeto window é um objeto padrao que existe em toda pagina da internet é um objeto muito importante
+
+
+ele tem centenas de metodos e propriedades,uma das mais importantes é o console
+
+o window é um bjeto padrao entao para acessar suas propriedades nao precisamos nem por o nome dele antes, console é so chamar o console.log
+
+todo metodo ou propriedade do window podemos chamar sem usar o escrever o window
+
+os mais importante sao: console.log() , alert(), o alert() mostra uma janela na aba escrito algo
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+DOCUMENT
+
+
+vamos ver das propriedade mais importantes do window o documents
+
+atravez do document podemos acessar o html com js,podendo ser possivel acessar seus elementos html com java script
+
+podemos ver no console usando: console.log(document);
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+DOCUMENT - PARTE 2
+
+
+vamos ver o doom=modelo de objetos do documento
+
+temos a propriedade document que tras todo o html
+
+cada tag do html pode ser transforma em um objeto do javascript,uma vez transformada em um objeto javascript podemos modificar ela
+
+atraves do js podemos acessar um tag,modificar essa tag,apagar essa tag,inserir uma tag html no nosso documento.Podemos brincar mt com o js
+
+para pegarmos a tag é so por um . dps do document,ex: document.body
+
+temos um propriedade do document.body chamada innerHTML,com ela podemos accessar oq tem dentro do body
+
+podemos atribuir e concatenar coisas no nosso innerHTML usando o = e passando uma string
+
+concatenamos uma string e o codigo atual dela continua com o script 
+
+podemos inserir usando: document.body.innerHTML = "<h1>Esse titulo foi inserido no JS"+document.body.innerHTML
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+ACESSANDO ELEMENTOS HTML COM JS
+
+
+
+o documento se abre como se fosse uma arvore,que um objeto vai dtendo outros objetos dentro dele
+
+vamos aprender a acessar qualquer elemento graças a um metodo que o document tem
+
+document.getElementById("nomeDoId") : com isso pegamos o elemento pelo id dele
+
+document.getElementsByClassName("nomeDaClasse") : par pegar o elemento pela class
+
+voce pode imprimir todos os elementos que usam a class,ex paragrafo=nome da class -> for(let p of paragrafos){console.log(p)}
+
+se voce quiser pegar todos os elementos de uma tag,use: document.getElementsByTagName("nomeDaTag")
+
+voce pode tacar tudo em uma variavel e dps dar um console na var q voce botou os valores 
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+MODIFICANDO ELEMENTOS
+
+
+primeira maneria de brincar com os elementos é usando o innerHTML ,ex: document.getElementById("p1").innerHTML = "Novo Conteúdo"
+
+tem tmb o innerText
+
+tmb tem o textContent
+
+DIFERENÇAS: innerHTML recebe um HTML o innerText e TextContent NAO!
+
+o innerHTML bota literalemnte um elemetno HTML,ex escrevendo uma tag e enviando,ex="<h2>elemento H2 sendo mandado</h2>" . ira por um h2 msm
+
+DIFERENÇA ENTRE textContent e innerText:
+
+o innerText vai mostrar oq esta visivel na tela,aparente na tela do navegador,NAO MOSTRA OQ ESTA COMO CONTEUDO OCULTO DO CODIGO 
+
+textContent vai mostrar tudo oq é texto q esta aparecendo no nosso codigo html,mostra um elemento que nao é visivel mais esta no codigo
+
+a gente pode modificar um atributo,ex: id e o class do nosso elemento,e adicionar css neles
+
+podemos pegar a class e trocar a class e por nada,perdendo a sua class,use: nomeDaTag.className=" "
+
+so pode modificar um atributo usando o nome da tag e ponto o nome do atributo se ele for um atributo classe,se nao for,ele nao sera definido
+
+se for por exemplo uma tag paragrafo voce pode adicionar um atributo com um css,ex: p.style = "color:blue"
+
+voce pode acessar um atributo que voce botou com um nome nao comum(ex:meuAtt) usando: p.getAttribute("meuAtt")
+
+se voce quiser mudar o atributo meuAtt,use: p.setAttribute("meuAtt", "Outro nome") , passando o nome e o valor que voce quer
+
+voce pode adicionar um outro atributo com qualquer coisa tmb,ex: p.setAttribute("novoAtt", "qualquer coisa") 
+
+isso permite que a gente mude o estilo dele de uma meneira bem facil,ex: p.style.backgroundColor = "red"
+
+om js a gente consegue acessar os elementos e mudar todos os atributos,todos os valores que tem haver com esse elemento
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+EVENTOS - PARTE 1/3 (DOM EVENTS)
+
+
+
+vamos ver eventos do javascript
+
+vamos aprender a integrar o html com js
+
+podemos usar um atributo no h1 .
+
+no onclick="" podemos por javascript
+
+temos tmb um evento chamado onchange="" , assiona quando tiramos o foco do campo de texto
+
+tem um evento chama oninput="" quando voce digita ele ja atualiza a pagina e executa na hora automaticamente
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+EVENTOS - PARTE 2/3
+
+
+onload="" é um evento que é executado quando a pagina é carregada completamente
+
+onmouseover="" evento para quando o mouse passar por cima do elemento ser executado
+
+onmouseout="" ,evento usado para quando o mause sair de cima do elemente executar o codigo
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+EVENTOS - PARTE 3/3
+
+
+vamos aprender como adicionar um evento ao elemento atravez do javaScript
+
+onload="" ,usado para executar um evento quando a pagina carregar.Vc faz uma function de js dentro do head e chama no body usando o onload
+
+ex: <body onload="funçao()">
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+O QUE É O THIS?
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+TIRANDO DUVIDAS SOBRE O LANCE DOS PARENTESES NAS FUNCOES
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+COMPARANDO AS MANEIRAS DE CRIAR UM EVENTOS
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+ELEMENTOS PAI E FILHOS
+
+
+voce pode pegar os filhos dos elementos usando o children e os pais usando o parentElement
+
+pode pegar os elementos do body(vira como array): document.body.children[ ]
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+BIBLIOTECA MATH
+
+
+Math.PI = numero de pi
+
+Math.sqrt( ) = raiz quadrada de ...
+
+Math.pow(base, elevado-a) = potencia
+
+Math.random( ) = numero aleatorio de 0 a 1
+
+a funçao Math.round( ) arredonda de 5.50 ou + para cima de 5.49- pra baixo,deixando ele inteiro
+
+se voce quiser arredondar para o numero piso,ex 5.99=5.use Math.floor(5.99); . resultado = 5
+
+para arredondar para cima,ex: 5.01 = 6 -use: Math.ceil(5.0);
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+JSON
+
+
+JSON=representaçao de um objeto
+
+o JSON.stringify = pega um objeto json e transofrma em uma string
+
+o metodo JSON.parse = pega uma string e transforma em um objeto json
+
+para criar um string para dps ser transformada em um objeto JSON use esse modelo: let j = '{"nome":"fabio", "nota":7.8}';
+
+ai dps damos um JSON.parse(j);
+
+ai podemos trata-lo como objeto e pedir o nome ou nota,ex o nome:console.log(j.nome)
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+LOCAL STORAGE - PERSISTENCIA DE DADOS
+
+
+antes no js tudo se perdia dps de fechar ou atualizar a pagina,com o localStorage tem como armazenar e buscar dps de fechar a aba
+
+o localStorage tem 3 metodos interessantes-> localStorage.setItem(); , localStorage.getItem(); , localStorage.removeItem();
+
+localStorage.setItem(); vai gravar um dado na memoria do navegador e a gente vai poder usar esse dado depois
+
+localStorage.getItem(); para usar o dado dps,vai na memoria do navegar e pega esse dado da memoria para usarmos
+
+localStorage.removeItem(); vai na memoria do navegador e paga o dado e nao conseguimos mais acessa-lo
+
+os argumentos dentro das (),vao ser ("chave" , "stringComValorDaChave")
+
+para pegar,use:let n = localStorage.getItem("chave"); console.log(n) , assim ira retornar o valor da chave
+
+para remover,use: localStorage.removeItem("chave");
+
+para passar um valor numerico use o JSON: let a ={nome:"Igor", n1:7.3} localStorage.setItem("aluno", JSON.stringify(a));
+
+para pegar em forma de objeto,use: let a = localStorage.getItem("aluno"); console.log(JSON.parse(a));
+
+os dados vao estao acessiveis e salvos no msm dominio,nao tem como em dominio diferente voce tentar pegar um dado que seja de outro dominio
+
+tem um metodo que apaga TODOS os dados que estiverem na memoria,use: localStorage.clear();
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+TIMER E INTERVALO
+
+
+setInterval(funcao, 1000); -> execute funcao a cada 1 seg
+
+setTimeout(funcao, 3000); -> execute a funcao uma unica vez depois de 3000 milissegundos = 3s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
